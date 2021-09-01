@@ -13,7 +13,7 @@ namespace OOP
 
 
             // tuple new syle
-            var Person = GetAgeAndName();
+            var Person = GetAgeAndName(23,"Mridul");
             Console.WriteLine("Person Name - " + Person.Item2);
             Console.WriteLine("Person Age - " + Person.Item1);
 
@@ -24,14 +24,19 @@ namespace OOP
             Console.WriteLine("Person Name - " + Person2.Item2);
             Console.WriteLine("Person Age - " + Person2.Item1);
 
+
+
+            // you can use this like that
+            var (age,name) = GetAgeAndName(27,"tanvir");
+            Console.WriteLine("person Name - "+ name);
+            Console.WriteLine("person Name - " + age);
+
         }
 
 
         // in c# 7 Tuple update like this or you can say tuple new style
-        public static Tuple<int,string> GetAgeAndName()
+        public static Tuple<int,string> GetAgeAndName(int age,string name)
         {
-            int age = 23;
-            string name = "Mridul";
             return Tuple.Create(age,name);
         }
 
@@ -43,6 +48,7 @@ namespace OOP
             string name = "Zakaria";
             return(age, name);
         }
+
     }
 }
 

@@ -26,7 +26,7 @@ namespace OOP
 
 
 
-            // you can use this like that
+            // you can also use this like that
             var (age,name) = GetAgeAndName(27,"tanvir");
             Console.WriteLine("person Name - "+ name);
             Console.WriteLine("person Name - " + age);
